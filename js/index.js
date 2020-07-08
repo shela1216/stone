@@ -47,6 +47,7 @@
                     }
                 }
             }
+            this.testGirl();
         },
 
         methods: {
@@ -54,6 +55,21 @@
                 var screenHeight = document.body.clientHeight;
                 this.viewHeight = screenHeight;
             },
+            testGirl:function(){
+                var xhr = new XMLHttpRequest();
+                var self = this;
+                xhr.open("GET", "https://api.blogbig.cn/random/api.php?return=json");
+                xhr.send();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            var data = JSON.parse(xhr.responseText);
+                            console.log(data);
+                        }
+                    }
+                }
+                this.testGir                
+            }
         }
     })
 })(window);
