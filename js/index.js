@@ -58,7 +58,7 @@
             testGirl:function(){
                 var xhr = new XMLHttpRequest();
                 var self = this;
-                xhr.open("GET", "https://api.blogbig.cn/random/api.php?return=json");
+                xhr.open("GET", "https://api.blogbig.cn/dmapi/api.php?return=json");
                 xhr.send();
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState == 4) {
